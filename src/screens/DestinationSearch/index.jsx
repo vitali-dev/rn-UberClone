@@ -3,6 +3,7 @@ import {View, SafeAreaView, TextInput} from 'react-native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 
 import styles from './styles';
+import {API_KEY} from '@env';
 
 const DestinationSearch = (props) => {
   const [originPlace, setOriginPlace] = useState('');
@@ -27,7 +28,7 @@ const DestinationSearch = (props) => {
             textInput: styles.textInput,
           }}
           query={{
-            key: 'AIzaSyAInMbzldYqiAp8chQb1yjJvNsLMexaijc',
+            key: API_KEY,
             language: 'en',
           }}
         />
@@ -42,7 +43,7 @@ const DestinationSearch = (props) => {
             textInput: styles.textInput,
           }}
           query={{
-            key: 'AIzaSyAInMbzldYqiAp8chQb1yjJvNsLMexaijc',
+            key: API_KEY,
             language: 'en',
           }}
         />
