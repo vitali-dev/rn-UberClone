@@ -1,14 +1,18 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Dimensions} from 'react-native';
 import HomeMap from '../../components/HomeMap';
 import UberTypes from '../../components/UberTypes';
 
 const SearchResults = () => {
   return (
-    <View>
-      <HomeMap />
+    <View style={{display: 'flex', justifyContent: 'space-between'}}>
+      <View style={{height: Dimensions.get('window').height - 400}}>
+        <HomeMap />
+      </View>
 
-      <UberTypes />
+      <View style={{height: 400}}>
+        <UberTypes />
+      </View>
     </View>
   );
 };
